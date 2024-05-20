@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<head>
+    <title>Contact Form</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <script>
+      function validateForm() {
+          var requiredFields = document.querySelectorAll('[required]');
+          var allFieldsFilled = true;
+      
+          requiredFields.forEach(function(field) {
+              if (field.value.trim() === '') {
+                  allFieldsFilled = false;
+              }
+          });
+      
+          if (allFieldsFilled) {
+              alert('Your message has been sent, please check your email for our response. Thank you!');
+              window.location.href='contact.html';
+          } else {
+              alert('Please fill out all the required fields.');
+          }
+      }
+      </script>
+</head>
+<body>
+    <hr class="top">
+    <div class="logoContainer">
+        <img class="logo" src="productspic/logo-pics/stickerland logo (2).png">
+    </div>
+    <div class="sitenameContainer">
+        <img class="sitename" src="productspic/logo-pics/stickerlandpic.png">
+    </div>
+    <div class="topnav">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a class="active" href="contact.html">Contact</a>
+    </div>
+    <hr class="bot">
+    <div class="container">
+
+    <div class="title">
+        <h2>Contact Form</h2>
+    </div>
+  <div class="d-flex">
+    <form action="" method="">
+      <label>
+        <span class="fname">First Name <span class="required">*</span></span>
+        <input type="text" name="fname">
+      </label>
+      <label>
+        <span class="lname">Last Name <span class="required">*</span></span>
+        <input type="text" name="lname">
+      </label>
+      <label>
+        <span>Middle Name (Optional)</span>
+        <input type="text" name="mname">
+      </label>
+      <label>
+        <span class="pname">Message: <span class="required">*</span></span>
+        <input type="text" name="pname">
+      </label>
+      <label>
+        <span>Phone <span class="required">*</span></span>
+        <input type="tel" name="city"> 
+      </label>
+      <label>
+        <span>Email Address <span class="required">*</span></span>
+        <input type="email" name="city"> 
+      </label>
+      <button type="button" onclick="validateForm()">Submit</button>
+    </form>
+   </div>
+  </div>
+
+  
+
+
+</body>
+</html>
